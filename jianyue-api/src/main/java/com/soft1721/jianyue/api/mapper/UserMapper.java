@@ -34,6 +34,9 @@ public interface UserMapper {
     @Update("UPDATE t_user SET nickname=#{nickname} WHERE id =#{id}")
     void updateName(User user);
 
+    @Update("UPDATE t_user SET password=#{password} WHERE id =#{id}")
+    void updatePassword(User user);
+
     @Insert("INSERT INTO t_user(mobile,password,nickname,avatar,regtime,status)" +
             " VALUES(#{mobile}, #{password}, #{nickname},#{avatar},#{regtime},#{status}) ")
     void insert(User user);

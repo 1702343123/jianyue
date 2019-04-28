@@ -41,6 +41,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public void updatePassword(User user) {
+        userMapper.updatePassword(user);
+    }
+
+    @Override
     public int signIn(UserDTO userDTO) {
         User user = userMapper.getUserByMobile(userDTO.getMobile());
         //手机号存在

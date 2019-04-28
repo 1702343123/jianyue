@@ -29,6 +29,4 @@ public class MailServiceImpl implements MailService {
             System.out.println("发送简单邮件失败");
         }
     }
-
-
 }

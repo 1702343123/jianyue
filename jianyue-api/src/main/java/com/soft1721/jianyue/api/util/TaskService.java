@@ -11,9 +11,9 @@ import org.springframework.stereotype.Service;
 @Service
 //@Async
 public class TaskService {
-    @Autowired
-    private MailService mailService;
-
+//    @Autowired
+//    private MailService mailService;
+//
 //    @Scheduled(cron = "0 0 10 * * ?")
 //    public void proces(){
 //        mailService.sendMail("16422802@qq.com","王杰","定时10:00发送");

@@ -40,7 +40,7 @@ public interface ArticleMapper {
     @Options(useGeneratedKeys = true, keyProperty = "id", keyColumn = "id")
     void insertArticle(Article article);
 
-    @Select("SELECT t_user.id,t_article.title FROM t_article LEFT JOIN t_user ON t_user.id=t_article.u_id WHERE t_user.id=#{uId}")
+    @Select("SELECT t_article.id,t_article.title FROM t_article LEFT JOIN t_user ON t_user.id=t_article.u_id WHERE t_user.id=#{uId}")
     List<ArticleVO> getArticleByUId(int uId);
 
     @Delete("DELETE FROM t_article WHERE id=#{id}")

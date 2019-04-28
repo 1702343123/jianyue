@@ -114,6 +114,14 @@ public class UserController {
         userService.updateName(user);
     }
 
+    @PutMapping(value = "/password")
+    public void updatePassword(@RequestBody String newPassword,int id){
+        User user=userService.getUserById(id);
+        String newPassword2=StringUtil.getBase64Encoder(newPassword);
+        user.setPassword(newPassword2);
+        userService.updatePassword(user);
+    }
+
     @PostMapping(value = "/sign_in")
     public ResponseResult signIn(@RequestBody UserDTO userDTO) {
         System.out.println(userDTO);

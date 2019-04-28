@@ -33,6 +33,11 @@ public interface UserService {
     void updateName(User user);
 
     /**
+     * 更改密码
+     * */
+    void updatePassword(User user);
+
+    /**
      * 登录方法
      *
      * @param userDTO
